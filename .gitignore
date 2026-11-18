@@ -1,0 +1,5 @@
+# Ignora file di sistema e file temporanei
+.DS_Store
+Thumbs.db
+node_modules/
+*.log

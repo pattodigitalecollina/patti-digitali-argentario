@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Social Sharing -->
+  <title>Patto Digitale Argentario · Comenius | Una comunità per crescere insieme</title>
+  <meta name="description" content="Il Patto Digitale della Circoscrizione Argentario (Trento) e dell'IC Comenius: alleanza tra genitori, scuola e territorio per un uso consapevole e critico di smartphone, social e intelligenza artificiale.">
+  <meta name="keywords" content="Patti Digitali, Argentario, Trento, Comenius, Cognola, educazione digitale, smartphone ragazzi, regole schermi">
+  <meta property="og:title" content="Patto Digitale Argentario · Comenius">
+  <meta property="og:description" content="Accompagnare, non vietare. Scopri le 6 regole, i prossimi eventi e le iniziative della comunità dell'Argentario a Trento.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo_patto.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- CSS Principale -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-brand" aria-label="Home Patto Digitale Argentario">
+        <div class="nav-logo-badge">
+          <img src="assets/logo_patto.png" alt="Logo Patto Digitale Argentario" class="nav-logo-img">
+        </div>
+        <div class="nav-brand-text">
+          <span>ARGENTARIO</span>
+          <span class="nav-brand-sub">Comenius · Trento</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#patto">I 6 Punti del Patto</a></li>
+          <li><a href="#eventi">Prossimi Eventi</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#territorio">La Rete</a></li>
+          <li><a href="#contatti">Partecipa</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="assets/patto-digitale-argentario-comenius.pdf" download class="btn btn-primary btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Scarica il Patto (PDF)
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Apri menu di navigazione" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-content">
+            <div class="hero-pill">
+              <span>🌱 Comunità Educante · Argentario &amp; Comenius</span>
+            </div>
+
+            <h1 class="hero-title">
+              Una comunità per crescere insieme nell'<span class="accent-text">era digitale</span>.
+            </h1>
+
+            <div class="hero-motto">
+              <strong>"Accompagnare, non vietare"</strong>: non siamo contro la tecnologia. Vogliamo più consapevolezza e un uso critico di social, internet e intelligenza artificiale per i nostri figli/e e per noi adulti.
+            </div>
+
+            <div class="hero-actions">
+              <a href="#eventi" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                Prossimi Eventi
+              </a>
+              <a href="assets/patto-digitale-argentario-comenius.pdf" download class="btn btn-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Scarica il Volantino (PDF)
+              </a>
+              <a href="#contatti" class="btn btn-whatsapp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                Unisciti alla Community
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hero-stat-card">
+                <span class="hero-stat-num">68+</span>
+                <span class="hero-stat-label">Famiglie aderenti al patto</span>
+              </div>
+              <div class="hero-stat-card">
+                <span class="hero-stat-num">120+</span>
+                <span class="hero-stat-label">Genitori nel canale WhatsApp</span>
+              </div>
+              <div class="hero-stat-card">
+                <span class="hero-stat-num">6 Regole</span>
+                <span class="hero-stat-label">Inclusa la nostra: "Creare Alternative"</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-card">
+              <div class="hero-card-header">
+                <span class="hero-badge-tag">Dal Parco alla Comunità</span>
+                <span style="font-size: 0.82rem; color: var(--amber); font-weight: 700;">Trento · Cognola</span>
+              </div>
+              <div class="hero-art-wrapper">
+                <img src="assets/ill_gruppo.png" alt="Illustrazione gruppo genitori e ragazzi" class="hero-art-img">
+              </div>
+              <p class="hero-card-quote">
+                "Nato a luglio 2025 da 2–3 genitori al parco mentre i figli giocavano. Oggi è un'alleanza viva con l'Istituto Comenius, la Circoscrizione e la Biblioteca dell'Argentario."
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEZIONE: IL PATTO & I 6 PUNTI
+         ============================================================ -->
+    <section class="section section-alt" id="patto">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">I Nostri Impegni Condivisi</span>
+          <h2 class="section-title">Le 6 Regole del Patto Argentario</h2>
+          <p class="section-desc">
+            Sottoscrivendo il documento aderiamo ai principi del <strong>Manifesto dell'educazione digitale di comunità</strong>. Ai 5 punti nazionali abbiamo aggiunto una sesta regola fondamentale per noi: <em>creare alternative reali</em>.
+          </p>
+        </div>
+
+        <div class="rules-grid">
+
+          <!-- Regola 1 -->
+          <article class="rule-card">
+            <div class="rule-header">
+              <div class="rule-num">1</div>
+              <h3 class="rule-title">Tecnologia Consapevole &amp; Utile alla Crescita</h3>
+            </div>
+            <p>Incoraggiare rispetto e gentilezza negli spazi digitali, prevenendo il cyberbullismo. Promuovere un uso positivo offrendo un modello equilibrato da parte degli adulti.</p>
+            <div class="rule-highlight">
+              💡 Riconoscere rischi e opportunità del web, dei videogiochi e delle nuove applicazioni di Intelligenza Artificiale.
+            </div>
+          </article>
+
+          <!-- Regola 2 -->
+          <article class="rule-card">
+            <div class="rule-header">
+              <div class="rule-num">2</div>
+              <h3 class="rule-title">Educazione Digitale anche con i Figli/e</h3>
+            </div>
+            <p>Partecipare e promuovere occasioni di formazione familiare dedicate al mondo digitale. Trasmettere ai giovani un messaggio coerente ed efficace.</p>
+            <div class="rule-highlight">
+              🤝 Collaborazione stretta tra famiglie, scuola Comenius, associazioni culturali e sportive del territorio.
+            </div>
+          </article>
+
+          <!-- Regola 3 -->
+          <article class="rule-card">
+            <div class="rule-header">
+              <div class="rule-num">3</div>
+              <h3 class="rule-title">App, Social e Contenuti in Regola con l'Età</h3>
+            </div>
+            <p>Verificare le classificazioni di età (PEGI) e i limiti di legge (14 anni per i social e app di messaggistica). Per chi è vicino ai 14 anni si preferiscono percorsi graduali e accompagnati, senza anticipare l'uso autonomo.</p>
+            <div class="rule-highlight">
+              📱 Preferire strumenti sicuri come telefoni senza accesso a internet o telefoni fissi.
+            </div>
+          </article>
+
+          <!-- Regola 4 -->
+          <article class="rule-card">
+            <div class="rule-header">
+              <div class="rule-num">4</div>
+              <h3 class="rule-title">Accompagnamento alla Rete</h3>
+            </div>
+            <p>Garantire un periodo adeguato di supervisione e affiancamento nell'uso della rete e delle tecnologie.</p>
+            <div class="rule-highlight">
+              🎯 Attendere almeno il termine della <strong>scuola secondaria di primo grado (terza media)</strong> prima di affidare uno smartphone personale con accesso autonomo a internet.
+            </div>
+          </article>
+
+          <!-- Regola 5 -->
+          <article class="rule-card">
+            <div class="rule-header">
+              <div class="rule-num">5</div>
+              <h3 class="rule-title">Accordo di Famiglia</h3>
+            </div>
+            <p>Stabilire tempi e spazi precisi (es. evitare schermi durante i pasti e nelle ore notturne), dando il buon esempio anche noi adulti. Prevedere momenti della giornata completamente screen-free.</p>
+            <div class="rule-highlight">
+              📝 Sottoscrivere un contratto familiare condiviso genitori-figli con regole chiare.
+            </div>
+          </article>
+
+          <!-- Regola 6 (Speciale Argentario) -->
+          <article class="rule-card rule-special">
+            <div class="rule-special-body">
+              <div>
+                <div class="rule-header">
+                  <div class="rule-num">6</div>
+                  <div>
+                    <span class="rule-tag-extra">La nostra regola in più</span>
+                    <h3 class="rule-title">CREARE ALTERNATIVE</h3>
+                  </div>
+                </div>
+                <p>
+                  Non basta dire cosa non fare: per crescere bene serve la vita reale! Ai 5 punti dei Patti Digitali abbiamo aggiunto il nostro impegno attivo a <strong>cercare e organizzare occasioni per i ragazzi/e insieme alla scuola e al territorio</strong>.
+                </p>
+                <div class="rule-highlight" style="border-left-color: var(--amber);">
+                  🌳 Picnic al parco, pomeriggi di giochi in scatola, attività sportive, spazi di ritrovo fisici e l'apertura del nostro <strong>angolo libri dedicato al digitale presso la Biblioteca dell'Argentario</strong>.
+                </div>
+              </div>
+              <div>
+                <img src="assets/foto_libri.jpg" alt="Angolo libri Biblioteca dell'Argentario" class="rule-special-img">
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Download Banner -->
+        <div class="download-box">
+          <div class="download-box-text">
+            <h3>Vuoi leggere o firmare il Patto con la tua famiglia?</h3>
+            <p>Scarica il pieghevole originale in formato PDF con tutti i dettagli e lo spazio per l'adesione.</p>
+          </div>
+          <a href="assets/patto-digitale-argentario-comenius.pdf" download class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Scarica il Patto Completo (PDF)
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEZIONE: PROSSIMI EVENTI
+         ============================================================ -->
+    <section class="section" id="eventi">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Incontriamoci di persona</span>
+          <h2 class="section-title">Prossimi Eventi &amp; Appuntamenti</h2>
+          <p class="section-desc">
+            Serate formative, momenti di gioco all'aperto e tavoli di confronto aperti a tutta la comunità educante dell'Argentario.
+          </p>
+        </div>
+
+        <div class="events-list" id="eventsContainer">
+          <!-- Popolato dinamicamente da app.js con fallback SEO -->
+          <article class="event-card">
+            <div class="event-top">
+              <span class="event-badge warning">In arrivo</span>
+              <span class="event-category">Formazione</span>
+            </div>
+            <h3 class="event-title">Serata Parental Control: Pedagogia e Pratica</h3>
+            <div class="event-meta">
+              <div class="event-meta-item">
+                <span><strong>Prossimamente</strong> &middot; Ore 20:30</span>
+              </div>
+              <div class="event-meta-item">
+                <span>Teatro di Cognola / Sala Circoscrizione Argentario</span>
+              </div>
+            </div>
+            <p class="event-desc">Confronto pedagogico e laboratorio pratico di configurazione dei filtri famiglia su smartphone e tablet.</p>
+            <div class="event-footer">
+              <a href="#contatti" class="btn btn-secondary btn-sm" style="width: 100%;">Dettagli &amp; Iscrizioni</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEZIONE: NOTIZIE & AGGIORNAMENTI
+         ============================================================ -->
+    <section class="section section-alt" id="news">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Resta Informato</span>
+          <h2 class="section-title">Notizie &amp; Aggiornamenti</h2>
+          <p class="section-desc">
+            Notizie locali della Circoscrizione Argentario e aggiornamenti dalla rete nazionale dei Patti Digitali.
+          </p>
+        </div>
+
+        <!-- Filtri Notizie -->
+        <div class="news-filters">
+          <button class="filter-btn active" data-filter="tutte">Tutte le notizie</button>
+          <button class="filter-btn" data-filter="locale">Argentario &amp; Trento</button>
+          <button class="filter-btn" data-filter="nazionale">Rete Nazionale</button>
+        </div>
+
+        <div class="news-grid" id="newsContainer">
+          <!-- Popolato dinamicamente da app.js -->
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1rem;">
+            Vuoi approfondire l'iniziativa nazionale e scoprire altri patti in Italia?
+          </p>
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://pattidigitali.it/argentario-comenius/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              Visita la nostra scheda su pattidigitali.it ↗
+            </a>
+            <a href="https://pattidigitali.it/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              Portale Nazionale Patti Digitali ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEZIONE: IL NOSTRO PERCORSO & RETE
+         ============================================================ -->
+    <section class="section" id="territorio">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">La Nostra Storia</span>
+          <h2 class="section-title">Un Patto dentro una Rete Territoriale</h2>
+          <p class="section-desc">
+            Il valore più grande del nostro patto è l'alleanza tra persone ed enti dell'Argentario.
+          </p>
+        </div>
+
+        <div class="story-grid">
+          
+          <!-- Timeline -->
+          <div>
+            <h3 style="font-size: 1.6rem; margin-bottom: 1.5rem; color: var(--text-primary);">Il nostro percorso</h3>
+            
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Luglio 2025</div>
+                <p class="timeline-text">L'idea nasce da 2–3 genitori che si trovano al parco con i propri figli/e.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Autunno 2025</div>
+                <p class="timeline-text">Il passaparola cresce: incontri con 20–25 persone, invitando insegnanti e la dirigenza scolastica.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">28 Febbraio 2026</div>
+                <p class="timeline-text">Presentazione pubblica del Patto Digitale Argentario-Comenius al Teatro di Cognola con momento di formazione.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Settembre 2026</div>
+                <p class="timeline-text">Accoglienza alle classi prime medie il primo giorno di scuola, picnic al parco e apertura dello scaffale libri dedicato in biblioteca.</p>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Autunno 2026</div>
+                <p class="timeline-text">Giornate dell'educare: giochi all'aperto e in scatola per ragazzi/e e famiglie.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Territorio & Partner Box -->
+          <div class="territory-box">
+            <h3>Chi fa parte della Rete</h3>
+            <p>
+              Siamo in dialogo continuo con le istituzioni locali, la scuola e l'associazionismo per costruire una comunità che educa insieme:
+            </p>
+
+            <div class="partner-pills">
+              <span class="partner-pill">🏫 IC Comenius Trento</span>
+              <span class="partner-pill">🏛️ Circoscrizione Argentario</span>
+              <span class="partner-pill">📚 Biblioteca dell'Argentario</span>
+              <span class="partner-pill">🤝 Servizio Welfare Comune di Trento</span>
+              <span class="partner-pill">🇮🇹 Rete Patti Digitali Nazionali</span>
+              <span class="partner-pill">🎲 Associazioni &amp; Cooperative</span>
+            </div>
+
+            <p style="font-size: 0.92rem; color: var(--text-muted); font-style: italic; border-left: 2px solid var(--amber); padding-left: 0.8rem;">
+              "La nostra buona pratica: un patto dentro una rete. Cerchiamo persone sensibili, contribuiamo alle iniziative del territorio e invitiamo la comunità alle nostre."
+            </p>
+
+            <div class="territory-art">
+              <img src="assets/ill_rete.png" alt="Rete comunitaria" style="max-height: 140px;">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEZIONE: PARTECIPA & CONTATTI
+         ============================================================ -->
+    <section class="section section-alt" id="contatti">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Mettiti in Contatto</span>
+          <h2 class="section-title">Entra nella Nostra Comunità</h2>
+          <p class="section-desc">
+            Vuoi partecipare, fare domande, condividere un'idea o semplicemente rimanere aggiornato/a? Sei nel posto giusto.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <div class="contact-card-info">
+            <h3>Contatti Diretti</h3>
+            <p>Siamo genitori ed educatori dell'Argentario. Puoi scriverci o unirti al nostro canale WhatsApp comunitario per ricevere gli avvisi su incontri e iniziative.</p>
+
+            <div class="contact-methods">
+              <div class="contact-method-item">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <h4>Email di Riferimento</h4>
+                  <p>Scrivici per info o collaborazioni territoriali</p>
+                  <a href="mailto:pattodigitale.argentario@gmail.com" style="color: var(--amber); font-weight: 600;">pattodigitale.argentario@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <h4>Territorio</h4>
+                  <p>Circoscrizione Argentario (Cognola, Martignano, Montevaccino, San Donà, Villamontagna) · Trento</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="whatsapp-box">
+              <p><strong>Gruppo / Canale WhatsApp Comunitario:</strong><br>Oltre 120 genitori già iscritti. Nessun messaggio invasivo, solo avvisi su eventi e buone pratiche.</p>
+              <a href="#" class="btn btn-whatsapp btn-sm" style="width: 100%;">
+                Entra nel Gruppo WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form pronto per Netlify -->
+          <div class="contact-form-card">
+            <h3>Invia un Messaggio</h3>
+            <p>Compila il modulo per inviarci un commento, chiedere chiarimenti sul patto o proporre un'iniziativa:</p>
+
+            <form name="contatti" method="POST" data-netlify="true" netlify>
+              <input type="hidden" name="form-name" value="contatti">
+
+              <div class="form-group">
+                <label for="name">Nome e Cognome *</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Es. Marco Rossi" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">La tua Email *</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="nome@esempio.it" required>
+              </div>
+
+              <div class="form-group">
+                <label for="interest">Sei interessato/a come:</label>
+                <select id="interest" name="interest" class="form-control">
+                  <option value="genitore">Genitore</option>
+                  <option value="insegnante">Insegnante / Scuola</option>
+                  <option value="educatore">Educatore / Associazione</option>
+                  <option value="cittadino">Cittadino/a curioso/a</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Messaggio *</label>
+                <textarea id="message" name="message" class="form-control" placeholder="Scrivi qui il tuo messaggio o la tua proposta..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Invia Messaggio
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>Patto Digitale Argentario · Comenius</h4>
+          <p>Una comunità educante per accompagnare con consapevolezza la crescita dei nostri figli/e nel mondo digitale.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigazione</h5>
+          <ul>
+            <li><a href="#patto">Il Patto</a></li>
+            <li><a href="#patto">I 6 Punti Chiave</a></li>
+            <li><a href="#eventi">Prossimi Eventi</a></li>
+            <li><a href="#news">Notizie &amp; Aggiornamenti</a></li>
+            <li><a href="#territorio">La Rete Locale</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Collegamenti Esterni</h5>
+          <ul>
+            <li><a href="https://pattidigitali.it/argentario-comenius/" target="_blank" rel="noopener noreferrer">Scheda Argentario su pattidigitali.it ↗</a></li>
+            <li><a href="https://pattidigitali.it/" target="_blank" rel="noopener noreferrer">Rete Nazionale Patti Digitali ↗</a></li>
+            <li><a href="https://www.iccomenius.it/" target="_blank" rel="noopener noreferrer">Istituto Comprensivo Comenius ↗</a></li>
+            <li><a href="https://www.associazionemec.it/contratto-genitori-figli/" target="_blank" rel="noopener noreferrer">Contratto Genitori-Figli (MEC) ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Patto Digitale Argentario · Comenius (Trento). Iniziativa dal basso promossa da genitori e comunità educante.</div>
+        <div>
+          <a href="assets/patto-digitale-argentario-comenius.pdf" download style="color: var(--amber); font-weight: 600;">Scarica il Patto PDF</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Dati e UI -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
