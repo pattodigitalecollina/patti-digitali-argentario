@@ -145,17 +145,6 @@ const PATTO_DATA = {
       readMoreText: "Vai alla Campagna ↗"
     },
     {
-      id: "news-2",
-      title: "Il Patto Digitale Argentario-Comenius al III Meeting Nazionale a Milano",
-      type: "locale",
-      categoryLabel: "Argentario a Milano",
-      date: "Ottobre 2026",
-      summary: "L'esperienza del nostro territorio è stata portata al meeting nazionale di Milano-Bicocca come esempio di alleanza virtuosa tra genitori, scuola Comenius, Circoscrizione, cooperative e realtà locali.",
-      link: "#territorio",
-      hasLink: true,
-      readMoreText: "Leggi la nostra rete"
-    },
-    {
       id: "news-3",
       title: "Patti Digitali: la rete nazionale si espande in tutta Italia",
       type: "nazionale",

@@ -275,9 +275,6 @@ function renderPress() {
       <p class="press-summary">${escapeHTML(item.summary)}</p>
 
       <div class="press-actions">
-        <button type="button" class="btn btn-secondary btn-sm" onclick="openPressModal('${item.image}', '${escapeHTML(item.title)} - ${escapeHTML(item.source)}')">
-          🔍 Leggi ritaglio
-        </button>
         <a href="${item.image}" target="_blank" rel="noopener noreferrer" class="press-link">
           Apri file intero ↗
         </a>
