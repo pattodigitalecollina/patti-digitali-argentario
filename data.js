@@ -10,7 +10,7 @@ const PATTO_DATA = {
   futureEvents: [
     {
       id: "ev-online-30nov",
-      title: "Classi prime, facciamo un patto?",
+      title: "Facciamo un patto?",
       category: "Formazione & Dialogo",
       initiative: "Patto Argentario",
       isOnline: true,
@@ -19,7 +19,7 @@ const PATTO_DATA = {
       time: "Ore 20:45",
       location: "Piattaforma Zoom",
       locationBadge: "online", // 'cognola', 'povo', 'online'
-      summary: "Pensato in particolare per i genitori delle classi prime della scuola primaria, ma aperto a tutta la comunità. Come educare al digitale? Quando il primo smartphone? Ha senso vietare? Spostamenti in autonomia.",
+      summary: "Organizzato e promosso dai rappresentanti e dalle rappresentanti delle classi prime, ma aperto a tutte e tutti. Come educare al digitale? Quando il primo smartphone? Ha senso vietare? Spostamenti in autonomia.",
       speakers: "Daniele Cuder (MEC & Board Nazionale Patti Digitali) · Andrea Gobbi e Benedetta Bertolini (Genitori e referenti Patto Argentario)",
       zoomLink: "https://us06web.zoom.us/j/82794957513?pwd=CBBbWGe9PAed2PQCuaDUViWILKIaR2.1",
       zoomPasscode: "645405",
