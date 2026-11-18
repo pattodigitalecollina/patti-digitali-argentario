@@ -41,7 +41,7 @@ const PATTO_DATA = {
       time: "Ore 14:00 - 17:00",
       location: "Istituto Comenius, Cognola (Fascia 7-99 anni)",
       locationBadge: "cognola",
-      summary: "Un pomeriggio interamente dedicato al gioco da tavolo e alla cooperazione per famiglie, ragazzi ed educatori. Highlight speciale: 'Stracòt', l'esilarante versione dal vivo di Overcooked a squadre in sfide da 8 minuti a colpi di dadi e fornelli con i volontari di Ludimus! A cura delle famiglie del Patto Argentario.",
+      summary: "Un pomeriggio interamente dedicato al gioco da tavolo e alla cooperazione per famiglie, ragazze, ragazzi, educatrici ed educatori. Highlight speciale: 'Stracòt', l'esilarante versione dal vivo di Overcooked a squadre in sfide da 8 minuti a colpi di dadi e fornelli con volontarie e volontari di Ludimus! A cura delle famiglie del Patto Argentario.",
       note: "Attività libera e gratuita con merenda offerta. È gradita la prenotazione.",
       signupLink: "https://docs.google.com/forms/d/e/1FAIpQLSf5Nya907Gd99kCpAfuNyLZsid7UTZmsxHpq8YCGVB7QjcT1A/viewform",
       posterPdf: "assets/eventi/educare 2026/giornate_dell_educare_nov_26.pdf",
@@ -62,7 +62,7 @@ const PATTO_DATA = {
       time: "Ore 14:30 - 16:30",
       location: "Spazio Zero a Povo, Via del Salè 1 (Fascia 7-15 anni)",
       locationBadge: "povo",
-      summary: "CoderDojo Trento ti aspetta tra creatività digitale, videogiochi, biglietti luminosi, stampa e modellazione 3D ed elettronica a tema natalizio! Si può venire vestiti da elfi.",
+      summary: "CoderDojo Trento ti aspetta tra creatività digitale, videogiochi, biglietti luminosi, stampa e modellazione 3D ed elettronica a tema natalizio! Si può venire vestite o vestiti da elfe ed elfi.",
       note: "Attività libera e gratuita con merenda offerta. Iscrizione obbligatoria.",
       signupLink: "https://www.eventbrite.it/e/registrazione-coderdojo-al-laboratorio-degli-elfi-19-dicembre-spazio-zero-povo-2002496959311",
       posterPdf: "assets/eventi/educare 2026/giornate_dell_educare_nov_26.pdf",
@@ -87,7 +87,7 @@ const PATTO_DATA = {
       time: "Ore 14:30 - 16:30",
       location: "Spazio Zero a Povo, Via del Salè 1",
       locationBadge: "povo",
-      summary: "Due sfide per giovani curiosi: smontare ed esplorare i componenti di vecchie console retrò per capire come ripararle, e costruire meccanismi ed ingranaggi con LEGO tecnici.",
+      summary: "Due sfide per giovani curiose e curiosi: smontare ed esplorare i componenti di vecchie console retrò per capire come ripararle, e costruire meccanismi ed ingranaggi con LEGO tecnici.",
       posterPdf: "assets/eventi/educare 2026/giornate_dell_educare_nov_26.pdf",
       badge: "Svolto a Povo"
     },
@@ -128,7 +128,7 @@ const PATTO_DATA = {
       type: "locale",
       categoryLabel: "Argentario & Trento",
       date: "Novembre 2026",
-      summary: "Grazie alla preziosa collaborazione con la Biblioteca dell'Argentario, è attivo uno scaffale speciale con libri, saggi e guide educative per genitori, educatori e ragazzi sul tema dei media digitali e dell'equilibrio tra schermi e vita reale.",
+      summary: "Grazie alla preziosa collaborazione con la Biblioteca dell'Argentario, è attivo uno scaffale speciale con libri, saggi e guide educative per genitori, educatrici, educatori, ragazze e ragazzi sul tema dei media digitali e dell'equilibrio tra schermi e vita reale.",
       // Nessun pulsante 'Approfondisci' come richiesto!
       hasLink: false
     },
