@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archivio Eventi Passati | Patto Digitale Argentario · Comenius</title>
+  <meta name="description" content="Tutti gli incontri, laboratori e momenti di comunità già realizzati dal Patto Digitale Argentario · Comenius a Trento.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Home Patto Digitale Argentario">
+        <div class="nav-logo-badge">
+          <img src="assets/logo_patto.png" alt="Logo Patto Digitale Argentario" class="nav-logo-img">
+        </div>
+        <div class="nav-brand-text">
+          <span>ARGENTARIO</span>
+          <span class="nav-brand-sub">Comenius · Trento</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#patto">I 6 Punti</a></li>
+          <li><a href="index.html#eventi">Prossimi Eventi</a></li>
+          <li><a href="index.html#news">News</a></li>
+          <li><a href="index.html#territorio">La Rete</a></li>
+          <li><a href="index.html#contatti">Partecipa</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="index.html" class="btn btn-secondary btn-sm">
+          ← Torna alla Home
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding: 4.5rem 0 6rem;">
+    <div class="container">
+
+      <div style="margin-bottom: 3rem;">
+        <a href="index.html#eventi" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--amber); margin-bottom: 1.5rem;">
+          ← Torna ai Prossimi Eventi
+        </a>
+        <h1 style="font-size: clamp(2.2rem, 4.5vw, 3.4rem); color: var(--text-primary); margin-bottom: 0.8rem;">
+          Archivio Eventi &amp; Iniziative Passate
+        </h1>
+        <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 750px;">
+          Ripercorri tutti i momenti di formazione, i pomeriggi di gioco e gli incontri con cui la nostra comunità è cresciuta insieme nel tempo.
+        </p>
+      </div>
+
+      <!-- Griglia Eventi Passati -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem;" id="allPastEvents">
+
+        <!-- 14 Novembre: Missione come funziona -->
+        <article class="event-card">
+          <div class="event-top">
+            <span class="loc-badge povo">A Povo</span>
+            <span class="event-category">Giornate dell'Educare</span>
+          </div>
+          <h3 class="event-title">Missione: Come funziona? Laboratori di riparazione</h3>
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span><strong>Sabato 14 Novembre 2026</strong> &middot; Ore 14:30 - 16:30</span>
+            </div>
+            <div class="event-meta-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Spazio Zero a Povo, Via del Salè 1</span>
+            </div>
+          </div>
+          <p class="event-desc">
+            Laboratori pratici: smontare vecchie console per scoprirne il funzionamento e sperimentare con LEGO tecnici ed ingranaggi meccanici.
+          </p>
+          <div class="event-actions-group">
+            <a href="assets/eventi/educare 2026/giornate_dell_educare_nov_26.pdf" target="_blank" rel="noopener noreferrer" class="event-pdf-link">
+              📄 Locandina Giornate dell'Educare (PDF)
+            </a>
+          </div>
+        </article>
+
+        <!-- 10 Ottobre: Fuori si gioca -->
+        <article class="event-card">
+          <div class="event-top">
+            <span class="loc-badge cognola">A Cognola</span>
+            <span class="event-category">Giornate dell'Educare</span>
+          </div>
+          <h3 class="event-title">Fuori, si gioca! Pomeriggio all'aria aperta</h3>
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span><strong>Sabato 10 Ottobre 2026</strong> &middot; Ore 14:00 - 17:00</span>
+            </div>
+            <div class="event-meta-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Istituto Comenius, Cognola</span>
+            </div>
+          </div>
+          <p class="event-desc">
+            Giochi all'aperto alla riscoperta del valore del gioco condiviso con il gruppo Scout FSE, le famiglie del Patto e le cooperative Geco e Kaleidoscopio. Raccolta idee per il nuovo spazio giovani in collina.
+          </p>
+          <div class="event-actions-group">
+            <a href="assets/eventi/educare 2026/giornate_dell_educare_nov_26.pdf" target="_blank" rel="noopener noreferrer" class="event-pdf-link">
+              📄 Locandina Giornate dell'Educare (PDF)
+            </a>
+          </div>
+        </article>
+
+        <!-- Settembre: Prime Medie & Biblioteca -->
+        <article class="event-card">
+          <div class="event-top">
+            <span class="loc-badge cognola">A Cognola</span>
+            <span class="event-category">Comunità &amp; Scuola</span>
+          </div>
+          <h3 class="event-title">Primo giorno di scuola &amp; Apertura Angolo Libri</h3>
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <span><strong>Settembre 2026</strong></span>
+            </div>
+            <div class="event-meta-item">
+              <span>IC Comenius &amp; Biblioteca dell'Argentario</span>
+            </div>
+          </div>
+          <p class="event-desc">
+            Presentazione del patto alle famiglie delle prime classi medie, picnic di inizio anno e inaugurazione dello scaffale dedicato all'educazione digitale in Biblioteca.
+          </p>
+        </article>
+
+        <!-- 28 Febbraio: Teatro di Cognola -->
+        <article class="event-card">
+          <div class="event-top">
+            <span class="loc-badge cognola">A Cognola</span>
+            <span class="event-category">Battesimo del Patto</span>
+          </div>
+          <h3 class="event-title">Presentazione Pubblica del Patto Argentario</h3>
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <span><strong>28 Febbraio 2026</strong></span>
+            </div>
+            <div class="event-meta-item">
+              <span>Teatro di Cognola</span>
+            </div>
+          </div>
+          <p class="event-desc">
+            Grande serata pubblica di presentazione della bozza del Patto con momento di formazione per genitori e sottoscrizione dei primi impegni educativi.
+          </p>
+        </article>
+
+      </div>
+
+      <!-- Ringraziamento Welfare & Circoscrizione -->
+      <div class="thanks-welfare" style="margin-top: 3.5rem;">
+        <h4 style="color: var(--amber); margin-bottom: 0.5rem; font-family: var(--font-heading); font-size: 1.25rem;">
+          Iniziative in Rete con il Territorio
+        </h4>
+        <p>
+          Le Giornate dell'Educare sono promosse dal Distretto dell'Educazione del Comune di Trento, grazie alla collaborazione con gli enti del Sistema integrato dei Servizi per bambini, giovani e famiglie del <strong>Servizio Welfare e coesione sociale - Ufficio volontariato e partecipazione del Comune di Trento</strong>, e degli Istituti Comprensivi. Un ringraziamento sentito a tutte le famiglie dell'Argentario, Povo e Villazzano che rendono possibili queste occasioni di comunità.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <div>&copy; 2026 Patto Digitale Argentario · Comenius (Trento).</div>
+        <div>
+          <a href="index.html" style="color: var(--amber);">← Torna alla pagina iniziale</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

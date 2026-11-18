@@ -1,0 +1,1 @@
+Metti sia gli eventi passati che futuri. Estrai eventuali link per iscriversi, metti in evidenza quelli che sono a povo e quelli  chge sono a cognola. Metti in evidenza che fanno parte delle giornate dell'educare e ringrazia il servizio welfare del comune e in particolare la sezione dell'argentario

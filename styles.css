@@ -1223,3 +1223,280 @@ textarea.form-control {
     gap: 1rem;
   }
 }
+
+/* ============================================================
+   BANNER INVITO REALTÀ & ASSOCIAZIONI
+   ============================================================ */
+.partner-cta-banner {
+  background: linear-gradient(135deg, rgba(247, 172, 52, 0.12) 0%, rgba(28, 79, 124, 0.3) 100%);
+  border: 1.5px solid var(--amber);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem 2.8rem;
+  margin: 3.5rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), var(--shadow-glow);
+}
+
+.partner-cta-text h3 {
+  font-size: 1.7rem;
+  color: var(--amber);
+  margin-bottom: 0.5rem;
+}
+
+.partner-cta-text p {
+  font-size: 1rem;
+  color: var(--text-primary);
+  max-width: 680px;
+}
+
+/* ============================================================
+   BADGE LOCALITÀ & ZOOM
+   ============================================================ */
+.loc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.loc-badge.cognola {
+  background: rgba(28, 79, 124, 0.45);
+  color: #93c5fd;
+  border: 1px solid rgba(147, 197, 253, 0.3);
+}
+
+.loc-badge.povo {
+  background: rgba(16, 185, 129, 0.18);
+  color: #6ee7b7;
+  border: 1px solid rgba(110, 231, 183, 0.3);
+}
+
+.loc-badge.online {
+  background: rgba(247, 172, 52, 0.18);
+  color: var(--amber);
+  border: 1px solid rgba(247, 172, 52, 0.3);
+}
+
+.zoom-box {
+  background: rgba(28, 79, 124, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  margin: 0.8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.zoom-passcode {
+  font-family: monospace;
+  font-size: 0.95rem;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: var(--sky);
+  font-weight: 700;
+  border: 1px dashed rgba(56, 189, 248, 0.4);
+}
+
+.event-speaker-line {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 0.8rem;
+  border-left: 2px solid var(--amber);
+  padding-left: 8px;
+}
+
+.event-actions-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.event-pdf-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-glass);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.event-pdf-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================================
+   SEZIONE CAMPAGNA NAZIONALE: ASPETTANDO LO SMARTPHONE
+   ============================================================ */
+.campaign-card {
+  background: linear-gradient(135deg, #0e1e38 0%, #17152b 100%);
+  border: 1.5px solid rgba(56, 189, 248, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), 0 0 35px rgba(56, 189, 248, 0.15);
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.campaign-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--sky);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.campaign-card h3 {
+  font-size: 2.2rem;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.campaign-card h3 span {
+  color: var(--sky);
+}
+
+.campaign-card p {
+  font-size: 1.02rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+}
+
+.campaign-visual-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  text-align: center;
+}
+
+.campaign-visual-box h4 {
+  font-size: 1.3rem;
+  color: var(--amber);
+  margin-bottom: 0.5rem;
+}
+
+.campaign-visual-box p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================================
+   SEZIONE EVENTI PASSATI
+   ============================================================ */
+.past-events-wrapper {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border-glass);
+}
+
+.past-events-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.8rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.past-events-header h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+.past-events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.past-event-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  opacity: 0.88;
+  transition: var(--transition);
+}
+
+.past-event-card:hover {
+  opacity: 1;
+  background: var(--bg-card);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.past-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.6rem;
+}
+
+/* Ringraziamenti Comune/Welfare */
+.thanks-welfare {
+  background: rgba(28, 79, 124, 0.2);
+  border-left: 3px solid var(--sky);
+  padding: 1.1rem 1.4rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-top: 2.5rem;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+@media (max-width: 992px) {
+  .campaign-card {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .partner-cta-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+}
+

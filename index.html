@@ -122,7 +122,7 @@
                 <img src="assets/ill_gruppo.png" alt="Illustrazione gruppo genitori e ragazzi" class="hero-art-img">
               </div>
               <p class="hero-card-quote">
-                "Nato a luglio 2025 da 2–3 genitori al parco mentre i figli giocavano. Oggi è un'alleanza viva con l'Istituto Comenius, la Circoscrizione e la Biblioteca dell'Argentario."
+                "Nato a luglio 2025 da 2–3 genitori al parco mentre i figli giocavano. Oggi è un'alleanza viva con l'Istituto Comenius, la Circoscrizione, alcune associazioni, cooperative e le realtà del territorio."
               </p>
             </div>
           </div>
@@ -253,35 +253,41 @@
     <section class="section" id="eventi">
       <div class="container">
         <div class="section-header">
-          <span class="section-kicker">Incontriamoci di persona</span>
-          <h2 class="section-title">Prossimi Eventi &amp; Appuntamenti</h2>
+          <span class="section-kicker">Incontriamoci di persona e online</span>
+          <h2 class="section-title">Prossimi Eventi &amp; Iniziative</h2>
           <p class="section-desc">
-            Serate formative, momenti di gioco all'aperto e tavoli di confronto aperti a tutta la comunità educante dell'Argentario.
+            Incontri di formazione per genitori, dialoghi online e pomeriggi di gioco condiviso all'interno delle <strong>Giornate dell'Educare</strong> a Cognola e Povo.
           </p>
         </div>
 
+        <!-- Eventi Futuri (Popolati da app.js) -->
         <div class="events-list" id="eventsContainer">
-          <!-- Popolato dinamicamente da app.js con fallback SEO -->
-          <article class="event-card">
-            <div class="event-top">
-              <span class="event-badge warning">In arrivo</span>
-              <span class="event-category">Formazione</span>
-            </div>
-            <h3 class="event-title">Serata Parental Control: Pedagogia e Pratica</h3>
-            <div class="event-meta">
-              <div class="event-meta-item">
-                <span><strong>Prossimamente</strong> &middot; Ore 20:30</span>
-              </div>
-              <div class="event-meta-item">
-                <span>Teatro di Cognola / Sala Circoscrizione Argentario</span>
-              </div>
-            </div>
-            <p class="event-desc">Confronto pedagogico e laboratorio pratico di configurazione dei filtri famiglia su smartphone e tablet.</p>
-            <div class="event-footer">
-              <a href="#contatti" class="btn btn-secondary btn-sm" style="width: 100%;">Dettagli &amp; Iscrizioni</a>
-            </div>
-          </article>
+          <!-- Popolato dinamicamente da app.js -->
         </div>
+
+        <!-- Ringraziamento Welfare e Coesione Sociale Comune di Trento -->
+        <div class="thanks-welfare">
+          <strong style="color: var(--amber);">🤝 In rete con il Comune di Trento:</strong>
+          Le <em>Giornate dell'Educare</em> sono promosse dal Distretto dell'Educazione del Comune di Trento grazie alla collaborazione tra il <strong>Servizio Welfare e coesione sociale - Ufficio volontariato e partecipazione del Comune di Trento</strong> (in particolare la sezione dell'Argentario), gli Istituti Comprensivi Trento 1 e Trento 2, gli Scout FSE, Ludimus, CoderDojo e le cooperative Geco e Kaleidoscopio.
+        </div>
+
+        <!-- Sezione Eventi Passati (Ultimi 2 + Link Archivio) -->
+        <div class="past-events-wrapper">
+          <div class="past-events-header">
+            <div>
+              <span class="section-kicker" style="margin-bottom: 2px;">Cosa abbiamo fatto finora</span>
+              <h3>Iniziative ed Eventi Passati</h3>
+            </div>
+            <a href="eventi-passati.html" class="btn btn-secondary btn-sm">
+              Vedi tutto l'archivio eventi passati ↗
+            </a>
+          </div>
+
+          <div class="past-events-grid" id="pastEventsContainer">
+            <!-- Popolato dinamicamente da app.js con gli ultimi 2 eventi svolti -->
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -323,6 +329,38 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEZIONE: CAMPAGNA NAZIONALE ASPETTANDO LO SMARTPHONE
+         ============================================================ -->
+    <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
+      <div class="container">
+        <div class="campaign-card">
+          <div>
+            <div class="campaign-pill">
+              <span>Campagna Nazionale Patti Digitali</span>
+            </div>
+            <h3>Aspettando lo <span>Smartphone</span></h3>
+            <p>
+              Una campagna di sensibilizzazione ed alleanza per genitori ed educatori promossa a livello nazionale. Fornisce strumenti pedagogici, consigli pratici e il supporto di una comunità per vivere con serenità l'attesa prima di consegnare il primo smartphone personale ai ragazzi (almeno fino al termine della terza media).
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="https://aspettandolosmartphone.pattidigitali.it/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                Scopri la Campagna Ufficiale ↗
+              </a>
+              <a href="#patto" class="btn btn-secondary">
+                Leggi i 6 Punti del Patto
+              </a>
+            </div>
+          </div>
+          <div class="campaign-visual-box">
+            <h4>"Insieme è più facile"</h4>
+            <p>Non lasciare che sia la pressione dei coetanei a decidere i tempi e le regole. Con il patto di comunità le famiglie si accordano insieme.</p>
+            <span style="font-size: 0.8rem; color: var(--sky); font-weight: 700; text-transform: uppercase;">Rete Nazionale Patti Digitali</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -404,6 +442,22 @@
           </div>
 
         </div>
+
+        <!-- Banner Invito Realtà del Territorio -->
+        <div class="partner-cta-banner">
+          <div class="partner-cta-text">
+            <h3>Sei una realtà del territorio? Unisciti alla nostra rete!</h3>
+            <p>
+              Sei una cooperativa, un'associazione culturale o sportiva, un gruppo scout, una parrocchia o una realtà educativa attiva sull'Argentario e a Trento? Costruiamo insieme occasioni di socialità, giochi all'aperto e alternative concrete per le ragazze e i ragazzi.
+            </p>
+          </div>
+          <div>
+            <a href="mailto:pattodigitale.argentario@gmail.com?subject=Collaborazione%20con%20Patto%20Digitale%20Argentario" class="btn btn-primary" style="white-space: nowrap;">
+              ✉️ Scrivici per Collaborare
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -493,6 +547,13 @@
               <button type="submit" class="btn btn-primary" style="width: 100%;">
                 Invia Messaggio
               </button>
+
+              <div style="text-align: center; margin-top: 1.2rem; font-size: 0.88rem; color: var(--text-muted);">
+                Preferisci usare la tua applicazione di posta?<br>
+                <a href="mailto:pattodigitale.argentario@gmail.com?subject=Contatto%20dal%20sito%20Patto%20Digitale%20Argentario" style="color: var(--amber); font-weight: 600;">
+                  ✉️ Scrivi direttamente a pattodigitale.argentario@gmail.com ↗
+                </a>
+              </div>
             </form>
           </div>
 
