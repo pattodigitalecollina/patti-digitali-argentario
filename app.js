@@ -262,10 +262,9 @@ function renderPress() {
         <span class="press-date">${escapeHTML(item.date)}</span>
       </div>
 
-      <div class="press-thumb-container" onclick="openPressModal('${item.image}', '${escapeHTML(item.title)} - ${escapeHTML(item.source)}')">
+      <a href="${item.image}" target="_blank" rel="noopener noreferrer" class="press-thumb-container" title="Apri articolo intero">
         <img src="${item.image}" alt="${escapeHTML(item.title)}" class="press-thumb-img" loading="lazy">
-
-      </div>
+      </a>
 
       <h3 class="press-title">${escapeHTML(item.title)}</h3>
       ${item.subtitle ? `<div class="press-subtitle">${escapeHTML(item.subtitle)}</div>` : ''}
