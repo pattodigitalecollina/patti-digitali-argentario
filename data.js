@@ -62,7 +62,7 @@ const PATTO_DATA = {
       time: "Ore 14:30 - 16:30",
       location: "Spazio Zero a Povo, Via del Salè 1 (Fascia 7-15 anni)",
       locationBadge: "povo",
-      summary: "CoderDojo Trento ti aspetta tra creatività digitale, videogiochi, biglietti luminosi, stampa e modellazione 3D ed elettronica a tema natalizio! Si può venire vestite o vestiti da elfe ed elfi.",
+      summary: "CoderDojo Trento ti aspetta tra creatività digitale, videogiochi, biglietti luminosi, stampa e modellazione 3D ed elettronica a tema natalizio! Chi vuole può venire in costume a tema elfi.",
       note: "Attività libera e gratuita con merenda offerta. Iscrizione obbligatoria.",
       signupLink: "https://www.eventbrite.it/e/registrazione-coderdojo-al-laboratorio-degli-elfi-19-dicembre-spazio-zero-povo-2002496959311",
       posterPdf: "assets/eventi/educare 2026/giornate_dell_educare_nov_26.pdf",
