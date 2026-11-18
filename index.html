@@ -43,6 +43,7 @@
           <li><a href="#patto">I 6 Punti del Patto</a></li>
           <li><a href="#eventi">Prossimi Eventi</a></li>
           <li><a href="#news">News</a></li>
+          <li><a href="#press">Dicono di noi</a></li>
           <li><a href="#territorio">La Rete</a></li>
           <li><a href="#contatti">Partecipa</a></li>
         </ul>
@@ -333,6 +334,25 @@
     </section>
 
     <!-- ============================================================
+         SEZIONE: DICONO DI NOI (RASSEGNA STAMPA)
+         ============================================================ -->
+    <section class="section section-alt" id="press">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Rassegna Stampa</span>
+          <h2 class="section-title">Dicono di Noi</h2>
+          <p class="section-desc">
+            Gli articoli de <em>l'Adige</em> che raccontano il percorso del nostro patto, le iniziative sul territorio e la nostra partecipazione alla rete nazionale.
+          </p>
+        </div>
+
+        <div class="press-grid" id="pressContainer">
+          <!-- Popolato dinamicamente da app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
          SEZIONE: CAMPAGNA NAZIONALE ASPETTANDO LO SMARTPHONE
          ============================================================ -->
     <section class="section" style="padding-top: 2rem; padding-bottom: 2rem;">
@@ -573,11 +593,12 @@
         <div class="footer-col">
           <h5>Navigazione</h5>
           <ul>
-            <li><a href="#patto">Il Patto</a></li>
             <li><a href="#patto">I 6 Punti Chiave</a></li>
             <li><a href="#eventi">Prossimi Eventi</a></li>
             <li><a href="#news">Notizie &amp; Aggiornamenti</a></li>
+            <li><a href="#press">Dicono di Noi (Stampa)</a></li>
             <li><a href="#territorio">La Rete Locale</a></li>
+            <li><a href="#contatti">Partecipa</a></li>
           </ul>
         </div>
 
@@ -600,6 +621,15 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal Lightbox per Ritagli Giornale -->
+  <div class="press-modal" id="pressModal" role="dialog" aria-modal="true" aria-label="Visualizzazione ritaglio giornale">
+    <div class="press-modal-content">
+      <button class="press-modal-close" id="pressModalClose" aria-label="Chiudi visualizzazione">&times;</button>
+      <img src="" alt="Ritaglio giornale ingrandito" class="press-modal-img" id="pressModalImg">
+      <div class="press-modal-caption" id="pressModalCaption"></div>
+    </div>
+  </div>
 
   <!-- Script Dati e UI -->
   <script src="data.js"></script>

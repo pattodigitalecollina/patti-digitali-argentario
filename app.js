@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   renderPastEventsPreview();
   renderNews("tutte");
   initNewsFilters();
+  renderPress();
+  initPressModal();
   initSmoothScroll();
 });
 
@@ -245,3 +247,86 @@ function escapeHTML(str) {
     }[tag] || tag)
   );
 }
+
+// ------------------------------------------------------------
+// 6. Rendering Dicono di Noi (Rassegna Stampa)
+// ------------------------------------------------------------
+function renderPress() {
+  const container = document.getElementById("pressContainer");
+  if (!container || !PATTO_DATA || !PATTO_DATA.press) return;
+
+  container.innerHTML = PATTO_DATA.press.map(item => `
+    <article class="press-card" id="${item.id}">
+      <div class="press-top">
+        <span class="press-source-tag">📰 ${escapeHTML(item.source)}</span>
+        <span class="press-date">${escapeHTML(item.date)}</span>
+      </div>
+
+      <div class="press-thumb-container" onclick="openPressModal('${item.image}', '${escapeHTML(item.title)} - ${escapeHTML(item.source)}')">
+        <img src="${item.image}" alt="${escapeHTML(item.title)}" class="press-thumb-img" loading="lazy">
+        <div class="press-zoom-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          Ingrandisci
+        </div>
+      </div>
+
+      <h3 class="press-title">${escapeHTML(item.title)}</h3>
+      ${item.subtitle ? `<div class="press-subtitle">${escapeHTML(item.subtitle)}</div>` : ''}
+      <p class="press-summary">${escapeHTML(item.summary)}</p>
+
+      <div class="press-actions">
+        <button type="button" class="btn btn-secondary btn-sm" onclick="openPressModal('${item.image}', '${escapeHTML(item.title)} - ${escapeHTML(item.source)}')">
+          🔍 Leggi ritaglio
+        </button>
+        <a href="${item.image}" target="_blank" rel="noopener noreferrer" class="press-link">
+          Apri file intero ↗
+        </a>
+      </div>
+    </article>
+  `).join("");
+}
+
+// ------------------------------------------------------------
+// 7. Lightbox Modal per Rassegna Stampa
+// ------------------------------------------------------------
+function initPressModal() {
+  const modal = document.getElementById("pressModal");
+  if (!modal) return;
+
+  const closeBtn = document.getElementById("pressModalClose");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closePressModal);
+  }
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closePressModal();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("active")) {
+      closePressModal();
+    }
+  });
+}
+
+function openPressModal(imgSrc, caption) {
+  const modal = document.getElementById("pressModal");
+  const modalImg = document.getElementById("pressModalImg");
+  const modalCaption = document.getElementById("pressModalCaption");
+  if (!modal || !modalImg) return;
+
+  modalImg.src = imgSrc;
+  if (modalCaption) modalCaption.textContent = caption || "";
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closePressModal() {
+  const modal = document.getElementById("pressModal");
+  if (!modal) return;
+  modal.classList.remove("active");
+  document.body.style.overflow = "";
+}
+

@@ -167,5 +167,38 @@ const PATTO_DATA = {
       hasLink: true,
       readMoreText: "Visita pattidigitali.it"
     }
+  ],
+
+  // ------------------------------------------------------------
+  // DICONO DI NOI (Rassegna Stampa)
+  // ------------------------------------------------------------
+  press: [
+    {
+      id: "press-18nov",
+      source: "l'Adige",
+      date: "18 Novembre 2026",
+      title: "Dall'impegno delle famiglie al cambiamento delle comunità",
+      subtitle: "Il III meeting nazionale dei Patti Digitali a Milano Bicocca",
+      summary: "Racconto del meeting nazionale alla Bicocca di Milano con testimonianze dal Trentino. L'obiettivo: creare una forte sinergia tra scuola, famiglie ed enti locali per affrontare insieme il progresso tecnologico.",
+      image: "assets/press/Adige_18_11_26.jpeg"
+    },
+    {
+      id: "press-22set",
+      source: "l'Adige",
+      date: "22 Settembre 2026",
+      title: "Domani l'incontro alla scoperta del nuovo patto digitale",
+      subtitle: "Picnic e giochi all'aperto al Parco di Martignano",
+      summary: "L'invito del gruppo promotore di genitori per una giornata all'aria aperta all'insegna del gioco condiviso e del confronto tra famiglie ed educatori sui temi dell'educazione digitale.",
+      image: "assets/press/Adige_22_09_26.jpeg"
+    },
+    {
+      id: "press-09mar",
+      source: "l'Adige",
+      date: "9 Marzo 2026",
+      title: "Sì al telefono, ma usato consapevolmente",
+      subtitle: "Approvato e reso pubblico il Patto per la Circoscrizione Argentario",
+      summary: "Cronaca della presentazione ufficiale al Teatro di Cognola insieme all'Istituto Comprensivo Comenius: la formazione con la dottoressa Cordella e l'avvio delle adesioni nella comunità.",
+      image: "assets/press/adige_09_03_26.jpeg"
+    }
   ]
 };
