@@ -1098,6 +1098,19 @@ a:hover {
   box-shadow: 0 0 0 3px rgba(247, 172, 52, 0.2);
 }
 
+select.form-control {
+  color-scheme: dark;
+  background-color: #0f1c3f;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+select.form-control option {
+  background-color: #0b1329;
+  color: #f8fafc;
+  padding: 0.6rem 1rem;
+}
+
 textarea.form-control {
   resize: vertical;
   min-height: 110px;

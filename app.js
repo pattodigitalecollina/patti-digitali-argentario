@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initNewsFilters();
   renderPress();
   initPressModal();
+  initContactForm();
   initSmoothScroll();
 });
 
@@ -322,4 +323,56 @@ function closePressModal() {
   modal.classList.remove("active");
   document.body.style.overflow = "";
 }
+
+// ------------------------------------------------------------
+// 8. Gestione Modulo Contatti (Netlify Forms AJAX)
+// ------------------------------------------------------------
+function initContactForm() {
+  const form = document.querySelector('form[name="contatti"]');
+  if (!form) return;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Invio in corso...";
+    }
+
+    const formData = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    })
+      .then((response) => {
+        if (response.ok) {
+          form.innerHTML = `
+            <div style="text-align: center; padding: 2.5rem 1rem;">
+              <div style="width: 56px; height: 56px; margin: 0 auto 1.2rem; background: rgba(56, 189, 248, 0.15); border: 2px solid var(--sky); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--sky);">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <h4 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--text-primary); margin-bottom: 0.8rem; letter-spacing: 0.02em;">MESSAGGIO INVIATO!</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 1.8rem; max-width: 420px; margin-left: auto; margin-right: auto;">
+                Grazie per averci scritto. Abbiamo ricevuto la tua comunicazione e ti risponderemo al più presto.
+              </p>
+              <button type="button" class="btn btn-secondary btn-sm" onclick="window.location.reload()">
+                Invia un altro messaggio
+              </button>
+            </div>
+          `;
+        } else {
+          // In caso di risposta anomala, procedi con submit standard
+          form.submit();
+        }
+      })
+      .catch((err) => {
+        console.error("Errore fetch form:", err);
+        form.submit();
+      });
+  });
+}
+
 
