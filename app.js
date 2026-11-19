@@ -77,7 +77,7 @@ function renderFutureEvents() {
     // Nota opzionale
     const noteHTML = ev.note ? `
       <p style="font-size: 0.85rem; color: var(--amber); margin-bottom: 0.8rem; font-weight: 500;">
-        ℹ️ ${escapeHTML(ev.note)}
+        ${escapeHTML(ev.note)}
       </p>
     ` : '';
 
@@ -140,12 +140,12 @@ function renderPastEventsPreview() {
       <span class="past-tag">${escapeHTML(ev.badge || 'Svolto')} &middot; ${escapeHTML(ev.date)}</span>
       <h4 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.5rem;">${escapeHTML(ev.title)}</h4>
       <div style="font-size: 0.84rem; color: var(--text-dim); margin-bottom: 0.8rem;">
-        📍 ${escapeHTML(ev.location)}
+        ${escapeHTML(ev.location)}
       </div>
       <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">${escapeHTML(ev.summary)}</p>
       ${ev.posterPdf ? `
         <a href="${ev.posterPdf}" target="_blank" rel="noopener noreferrer" style="font-size: 0.82rem; color: var(--amber); margin-top: auto; display: inline-flex; align-items: center; gap: 4px;">
-          📄 Vedi locandina passata ↗
+          Vedi locandina passata ↗
         </a>
       ` : ''}
     </article>
@@ -258,7 +258,7 @@ function renderPress() {
   container.innerHTML = PATTO_DATA.press.map(item => `
     <article class="press-card" id="${item.id}">
       <div class="press-top">
-        <span class="press-source-tag">📰 ${escapeHTML(item.source)}</span>
+        <span class="press-source-tag">${escapeHTML(item.source)}</span>
         <span class="press-date">${escapeHTML(item.date)}</span>
       </div>
 
