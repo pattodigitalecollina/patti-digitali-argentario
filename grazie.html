@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messaggio Inviato | Patto Digitale Argentario · Comenius</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .thankyou-wrapper {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    .thankyou-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-glass);
+      border-radius: var(--radius-lg);
+      padding: 3.5rem 2.5rem;
+      max-width: 560px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), var(--shadow-glow);
+    }
+    .thankyou-icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 1.5rem;
+      background: rgba(247, 172, 52, 0.15);
+      border: 2px solid var(--amber);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--amber);
+    }
+    .thankyou-title {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      letter-spacing: 0.02em;
+    }
+    .thankyou-desc {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-logo-badge">
+          <img src="assets/logo_patto.png" alt="Logo Patto Digitale Argentario" class="nav-logo-img">
+        </div>
+        <div class="nav-brand-text">
+          <span>ARGENTARIO</span>
+          <span class="nav-brand-sub">Comenius · Trento</span>
+        </div>
+      </a>
+      <div class="nav-cta">
+        <a href="index.html" class="btn btn-secondary btn-sm">← Torna al sito</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="thankyou-wrapper">
+    <div class="thankyou-card">
+      <div class="thankyou-icon">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+      </div>
+      <h1 class="thankyou-title">Grazie per il tuo messaggio!</h1>
+      <p class="thankyou-desc">
+        Abbiamo ricevuto la tua comunicazione. Il gruppo promotore del Patto Digitale Argentario ti risponderà il prima possibile.
+      </p>
+      <a href="index.html" class="btn btn-primary" style="display: inline-flex;">
+        Torna alla pagina principale
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer" style="padding: 2rem 0; text-align: center; font-size: 0.85rem; color: var(--text-dim);">
+    <div class="container">
+      Patto Digitale Argentario · Comenius — Trento
+    </div>
+  </footer>
+
+</body>
+</html>
