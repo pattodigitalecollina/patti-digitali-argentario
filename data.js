@@ -16,6 +16,7 @@ const PATTO_DATA = {
       isOnline: true,
       territory: "Online su ZOOM",
       date: "Lunedì 30 Novembre 2026",
+      dateIso: "2026-11-30",
       time: "Ore 20:45",
       location: "Piattaforma Zoom",
       locationBadge: "online", // 'cognola', 'povo', 'online'
@@ -38,6 +39,7 @@ const PATTO_DATA = {
       isOnline: false,
       territory: "Cognola",
       date: "Sabato 28 Novembre 2026",
+      dateIso: "2026-11-28",
       time: "Ore 14:00 - 17:00",
       location: "Istituto Comenius, Cognola (Fascia 7-99 anni)",
       locationBadge: "cognola",
@@ -59,6 +61,7 @@ const PATTO_DATA = {
       isOnline: false,
       territory: "Povo",
       date: "Sabato 19 Dicembre 2026",
+      dateIso: "2026-12-19",
       time: "Ore 14:30 - 16:30",
       location: "Spazio Zero a Povo, Via del Salè 1 (Fascia 7-15 anni)",
       locationBadge: "povo",
@@ -188,6 +191,135 @@ const PATTO_DATA = {
       subtitle: "Approvato e reso pubblico il Patto per la Circoscrizione Argentario",
       summary: "Cronaca della presentazione ufficiale al Teatro di Cognola insieme all'Istituto Comprensivo Comenius: la formazione con la dottoressa Cordella e l'avvio delle adesioni nella comunità.",
       image: "assets/press/adige_09_03_26.jpeg"
+    }
+  ],
+
+  // ------------------------------------------------------------
+  // PATTI DIGITALI ATTIVI IN TRENTINO (RETE PROVINCIALE)
+  // 11 Patti Attivi + 1 In Avvio (Marzola)
+  // ------------------------------------------------------------
+  trentinoPacts: [
+    {
+      id: "patto-argentario",
+      name: "Patto Digitale Argentario · Comenius",
+      area: "Trento Est (Cognola, Martignano, Montevaccino, San Donà, Villamontagna)",
+      status: "Patto Attivo",
+      description: "Il nostro patto di comunità: alleanza tra famiglie dell'IC Comenius, Circoscrizione Argentario, cooperative e realtà del territorio.",
+      isOurPact: true,
+      hasEvent: false
+    },
+    {
+      id: "patto-cembra",
+      name: "Patti Digitali Valle di Cembra",
+      area: "Valle di Cembra (Cembra Lisignago, Albiano, Giovo, Segonzano, Sover)",
+      status: "Patto Attivo",
+      description: "Comunità attiva con il Piano Giovani e la rassegna teatrale 'Aspettando lo smartphone, vado a teatro'.",
+      hasEvent: true
+    },
+    {
+      id: "patto-gardolo-meano",
+      name: "Patto Digitale Gardolo e Meano",
+      area: "Trento Nord (Circoscrizioni di Gardolo e Meano · IC Trento 7)",
+      status: "Patto Attivo",
+      description: "Comunità educante attiva tra scuola, consulta genitori e realtà associative territoriali.",
+      hasEvent: false
+    },
+    {
+      id: "patto-trento4",
+      name: "Patto Digitale Trento 4",
+      area: "Trento Sud (Madonna Bianca, Clarina, Casteller · IC Trento 4)",
+      status: "Patto Attivo",
+      description: "Tra le prime realtà promotrici a Trento, con linee guida condivise per famiglie e docenti.",
+      hasEvent: false
+    },
+    {
+      id: "patto-rotaliana",
+      name: "Patti Digitali Rotaliana Königsberg",
+      area: "Piana Rotaliana (Lavis, Mezzolombardo, Mezzocorona, Terre d'Adige, San Michele)",
+      status: "Patto Attivo",
+      description: "Patti territoriali promossi dal Distretto Famiglia con linee guida specifiche 0-6 e 6-14 anni.",
+      hasEvent: false
+    },
+    {
+      id: "patto-rovereto",
+      name: "Patti Digitali Rovereto",
+      area: "Vallagarina (Rovereto · IC Rovereto Nord e rete cittadina)",
+      status: "Patto Attivo",
+      description: "Comitato promotore e assemblee partecipate per l'attesa dello smartphone dopo i 14 anni.",
+      hasEvent: false
+    },
+    {
+      id: "patto-pergine",
+      name: "Patto Digitale Pergine Valsugana",
+      area: "Alta Valsugana (Pergine Valsugana · IC Pergine 1 e comunità)",
+      status: "Patto Attivo",
+      description: "Alleanza tra genitori, istituti scolastici e associazioni del territorio per il benessere digitale.",
+      hasEvent: false
+    },
+    {
+      id: "patto-bassavalsugana",
+      name: "Patto Benessere Digitale Bassa Valsugana e Tesino",
+      area: "Bassa Valsugana (Borgo Valsugana, Scurelle, Castel Ivano, Tesino)",
+      status: "Patto Attivo",
+      description: "Patto territoriale integrato con la Comunità di Valle e le scuole della Bassa Valsugana.",
+      hasEvent: false
+    },
+    {
+      id: "patto-altogarda",
+      name: "Patto Digitale di Comunità Alto Garda",
+      area: "Alto Garda e Ledro (Arco, Riva del Garda e Distretto Famiglia)",
+      status: "Patto Attivo",
+      description: "Adottato dal Comune di Arco con scuole e famiglie per posticipare lo smartphone dopo la seconda media.",
+      hasEvent: false
+    },
+    {
+      id: "patto-fiemme",
+      name: "Patto Educativo Digitale Val di Fiemme",
+      area: "Val di Fiemme (Cavalese, Predazzo, Comunità Territoriale di Fiemme)",
+      status: "Patto Attivo",
+      description: "Rete territoriale promossa con l'Istituto La Rosa Bianca, pediatri e il portale pattodigitalefiemme.it.",
+      hasEvent: false
+    },
+    {
+      id: "patto-laghi",
+      name: "Patto Digitale Valle dei Laghi",
+      area: "Valle dei Laghi (Vezzano, Vallelaghi, Madruzzo, Cavedine)",
+      status: "Patto Attivo",
+      description: "Alleanza educativa tra famiglie e istituzioni della valle per promuovere alternative e vita all'aria aperta.",
+      hasEvent: false
+    },
+    {
+      id: "patto-marzola",
+      name: "Patto Digitale Marzola",
+      area: "Collina Est & Vigolana (Povo, Villazzano, Vigolo Vattaro)",
+      status: "In Avvio", // L'UNICO IN AVVIO!
+      description: "Percorso in fase di costituzione per unire le comunità educanti dell'area Marzola e Altopiano della Vigolana.",
+      isStarting: true,
+      hasEvent: false
+    }
+  ],
+
+  // ------------------------------------------------------------
+  // PROSSIMI EVENTI NELLA PROVINCIA DI TRENTO
+  // ------------------------------------------------------------
+  trentinoEvents: [
+    {
+      id: "ev-cembra-28nov",
+      title: "IT'S A MATCH! — Spettacolo Teatrale Ragazzi",
+      category: "Teatro & Comunità",
+      initiative: "Patti Digitali Valle di Cembra & Piano Giovani",
+      territory: "Valle di Cembra",
+      locationBadge: "cembra",
+      date: "Sabato 28 Novembre 2026",
+      dateIso: "2026-11-28",
+      time: "Ore 20:30",
+      location: "Teatro Comunale di Cembra (Cembra Lisignago)",
+      summary: "Spettacolo teatrale della Fondazione TRG all'interno della rassegna 'Aspettando lo smartphone, vado a teatro' della Stagione Teatrale Ragazzi 2026/2027. Regia e drammaturgia di Micol Jalla con Martina Montini e Letizia Russo. Consigliato dai 10 anni (durata 60 min).",
+      note: "Ingresso unico € 5 acquistabile presso la cassa del teatro la sera dell'evento o in prevendita con Trentino Spettacoli.",
+      posterImg: "assets/eventi_patti_trentino/cembra_teatro_match_28nov.jpeg",
+      actionLabel: "Apri Locandina Ufficiale",
+      actionLink: "assets/eventi_patti_trentino/cembra_teatro_match_28nov.jpeg",
+      isExternalEvent: true
     }
   ]
 };

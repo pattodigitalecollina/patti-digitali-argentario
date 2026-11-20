@@ -5,7 +5,9 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   initNavToggle();
+  processEventDates();
   renderFutureEvents();
+  renderTrentinoSection();
   renderPastEventsPreview();
   renderNews("tutte");
   initNewsFilters();
@@ -14,6 +16,50 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
   initSmoothScroll();
 });
+
+// ------------------------------------------------------------
+// Smistamento Automatico Eventi Passati / Futuri in base a data odierna
+// ------------------------------------------------------------
+function processEventDates() {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  // Smistamento Eventi Locali Argentario
+  const upcomingLocal = [];
+  const pastLocal = [...(PATTO_DATA.pastEvents || [])];
+
+  (PATTO_DATA.futureEvents || []).forEach(ev => {
+    if (ev.dateIso) {
+      const evDate = new Date(ev.dateIso + "T23:59:59");
+      if (evDate < today) {
+        if (!pastLocal.some(p => p.id === ev.id)) {
+          pastLocal.unshift({
+            ...ev,
+            badge: "Svolto"
+          });
+        }
+        return;
+      }
+    }
+    upcomingLocal.push(ev);
+  });
+
+  PATTO_DATA._activeFutureEvents = upcomingLocal;
+  PATTO_DATA._activePastEvents = pastLocal;
+
+  // Smistamento Eventi Rete Trentino
+  const upcomingTrentino = [];
+  (PATTO_DATA.trentinoEvents || []).forEach(ev => {
+    if (ev.dateIso) {
+      const evDate = new Date(ev.dateIso + "T23:59:59");
+      if (evDate < today) {
+        return;
+      }
+    }
+    upcomingTrentino.push(ev);
+  });
+  PATTO_DATA._activeTrentinoEvents = upcomingTrentino;
+}
 
 // ------------------------------------------------------------
 // 1. Mobile Menu Toggle
@@ -46,9 +92,10 @@ function initNavToggle() {
 // ------------------------------------------------------------
 function renderFutureEvents() {
   const container = document.getElementById("eventsContainer");
-  if (!container || !PATTO_DATA || !PATTO_DATA.futureEvents) return;
+  const events = PATTO_DATA._activeFutureEvents || PATTO_DATA.futureEvents;
+  if (!container || !events) return;
 
-  if (PATTO_DATA.futureEvents.length === 0) {
+  if (events.length === 0) {
     container.innerHTML = `
       <div style="grid-column: 1/-1; text-align: center; padding: 3rem; background: var(--bg-card); border-radius: var(--radius-md); border: 1px dashed var(--border-glass);">
         <p style="color: var(--text-muted); font-size: 1.1rem;">Nessun nuovo evento in programma al momento. Iscriviti al canale WhatsApp per ricevere le novità!</p>
@@ -57,7 +104,7 @@ function renderFutureEvents() {
     return;
   }
 
-  container.innerHTML = PATTO_DATA.futureEvents.map(ev => {
+  container.innerHTML = events.map(ev => {
     const locBadgeClass = ev.locationBadge || 'cognola';
     
     // Zoom box se è online
@@ -131,10 +178,11 @@ function renderFutureEvents() {
 // ------------------------------------------------------------
 function renderPastEventsPreview() {
   const container = document.getElementById("pastEventsContainer");
-  if (!container || !PATTO_DATA || !PATTO_DATA.pastEvents) return;
+  const pastEvents = PATTO_DATA._activePastEvents || PATTO_DATA.pastEvents;
+  if (!container || !pastEvents) return;
 
   // Mostra solo i primi 2 eventi passati in homepage
-  const previewList = PATTO_DATA.pastEvents.slice(0, 2);
+  const previewList = pastEvents.slice(0, 2);
 
   container.innerHTML = previewList.map(ev => `
     <article class="past-event-card" id="${ev.id}">
@@ -374,5 +422,111 @@ function initContactForm() {
       });
   });
 }
+
+// ------------------------------------------------------------
+// 9. Rendering Rete Patti Digitali & Eventi in Trentino
+// ------------------------------------------------------------
+function renderTrentinoSection() {
+  const pactsContainer = document.getElementById("trentinoPactsContainer");
+  const eventsContainer = document.getElementById("trentinoEventsContainer");
+
+  // Renderizza Lista Patti Vicini
+  if (pactsContainer && PATTO_DATA.trentinoPacts) {
+    pactsContainer.innerHTML = PATTO_DATA.trentinoPacts.map(pact => {
+      const isOur = pact.isOurPact ? 'is-our-pact' : '';
+      const statusClass = pact.status === 'Patto Attivo' ? 'active' : 'starting';
+
+      return `
+        <article class="pact-item-card ${isOur}" id="card-${pact.id}" onclick="selectPact('${pact.id}')">
+          <div class="pact-item-top">
+            <h4 class="pact-item-name">${escapeHTML(pact.name)}</h4>
+            <span class="pact-status-pill ${statusClass}">${escapeHTML(pact.status)}</span>
+          </div>
+          <div class="pact-item-area">📍 ${escapeHTML(pact.area)}</div>
+        </article>
+      `;
+    }).join("");
+  }
+
+  // Renderizza Eventi nel Trentino
+  const trentinoEvents = PATTO_DATA._activeTrentinoEvents || PATTO_DATA.trentinoEvents;
+  if (eventsContainer && trentinoEvents) {
+    if (trentinoEvents.length === 0) {
+      eventsContainer.innerHTML = `
+        <div style="grid-column: 1/-1; text-align: center; padding: 2.5rem; background: var(--bg-card); border-radius: var(--radius-md); border: 1px dashed var(--border-glass);">
+          <p style="color: var(--text-muted); font-size: 1rem;">Nessun altro evento provinciale in programma nei prossimi giorni. Consulta la mappa per scoprire le comunità attive!</p>
+        </div>
+      `;
+    } else {
+      eventsContainer.innerHTML = trentinoEvents.map(ev => {
+        const locBadgeClass = ev.locationBadge || 'cembra';
+
+        // Nota opzionale
+        const noteHTML = ev.note ? `
+          <p style="font-size: 0.85rem; color: var(--amber); margin-bottom: 0.8rem; font-weight: 500;">
+            ${escapeHTML(ev.note)}
+          </p>
+        ` : '';
+
+        return `
+          <article class="event-card" id="${ev.id}">
+            <div class="event-top">
+              <span class="loc-badge ${locBadgeClass}">${escapeHTML(ev.territory || 'Trentino')}</span>
+              <span class="event-category">${escapeHTML(ev.category)}</span>
+            </div>
+
+            <h3 class="event-title">${escapeHTML(ev.title)}</h3>
+
+            <div class="event-meta">
+              <div class="event-meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span><strong>${escapeHTML(ev.date)}</strong> &middot; ${escapeHTML(ev.time)}</span>
+              </div>
+              <div class="event-meta-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>${escapeHTML(ev.location)}</span>
+              </div>
+            </div>
+
+            <div class="event-speaker-line" style="margin-bottom: 0.8rem;">
+              <strong>Iniziativa:</strong> ${escapeHTML(ev.initiative)}
+            </div>
+
+            <p class="event-desc">${escapeHTML(ev.summary)}</p>
+            ${noteHTML}
+
+            <div class="event-actions-group">
+              <a href="${ev.actionLink || ev.posterImg || '#'}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%; justify-content: center;">
+                ${escapeHTML(ev.actionLabel || 'Apri Locandina')} ↗
+              </a>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+  }
+}
+
+// Funzione globale per evidenziare il patto selezionato sulla mappa e nella lista
+window.selectPact = function(pactId) {
+  // Deseleziona tutte le card
+  document.querySelectorAll(".pact-item-card").forEach(el => el.classList.remove("selected"));
+  // Deseleziona tutti i pin
+  document.querySelectorAll(".tn-pin").forEach(el => el.classList.remove("active-pin"));
+
+  // Seleziona card
+  const card = document.getElementById("card-" + pactId);
+  if (card) {
+    card.classList.add("selected");
+    card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  // Seleziona pin
+  const pin = document.getElementById("pin-" + pactId);
+  if (pin) {
+    pin.classList.add("active-pin");
+  }
+};
+
 
 

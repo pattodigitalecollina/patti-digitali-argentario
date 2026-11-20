@@ -112,7 +112,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--bg-glass);
+  background: rgba(8, 13, 26, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-glass);
@@ -123,36 +123,21 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 74px;
+  height: 68px;
 }
 
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   text-decoration: none;
-}
-
-.nav-logo-badge {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 6px 12px;
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-}
-
-.nav-logo-img {
-  height: 28px;
-  width: auto;
-  display: block;
 }
 
 .nav-brand-text {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   color: var(--text-primary);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   display: flex;
   flex-direction: column;
   line-height: 1;
@@ -171,16 +156,17 @@ a:hover {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.8rem;
+  gap: 1.6rem;
   list-style: none;
 }
 
 .nav-links a {
   color: var(--text-secondary);
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   padding: 6px 0;
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-links a::after {
@@ -202,10 +188,24 @@ a:hover {
   width: 100%;
 }
 
-.nav-cta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.nav-links a.nav-link-cta {
+  background: var(--amber-soft);
+  color: var(--amber);
+  border: 1px solid rgba(247, 172, 52, 0.35);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.nav-links a.nav-link-cta:hover {
+  background: var(--amber);
+  color: #080d1a;
+  border-color: var(--amber);
+}
+
+.nav-links a.nav-link-cta::after {
+  display: none;
 }
 
 /* Pulsante Hamburger Mobile */
@@ -216,7 +216,14 @@ a:hover {
   color: var(--text-primary);
   font-size: 1.6rem;
   cursor: pointer;
-  padding: 4px;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.nav-toggle:hover {
+  color: var(--amber);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 /* ============================================================
@@ -1185,6 +1192,47 @@ textarea.form-control {
 /* ============================================================
    RESPONSIVE (MOBILE & TABLET)
    ============================================================ */
+
+/* Responsive Navbar: sotto i 880px passa al menu drawer / hamburger */
+@media (max-width: 880px) {
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-glass);
+    flex-direction: column;
+    padding: 1.8rem 2rem;
+    gap: 1.2rem;
+    display: none;
+    z-index: 99;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 1.05rem;
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  .nav-links a.nav-link-cta {
+    text-align: center;
+    padding: 10px;
+    margin-top: 0.5rem;
+  }
+}
+
 @media (max-width: 992px) {
   .hero-grid,
   .story-grid,
@@ -1206,31 +1254,6 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 74px;
-    left: 0;
-    right: 0;
-    background: var(--bg-card);
-    border-bottom: 1px solid var(--border-glass);
-    flex-direction: column;
-    padding: 1.8rem;
-    gap: 1.2rem;
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-cta .btn {
-    display: none;
-  }
-
   .hero-stats {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -1296,6 +1319,24 @@ textarea.form-control {
   background: rgba(247, 172, 52, 0.18);
   color: var(--amber);
   border: 1px solid rgba(247, 172, 52, 0.3);
+}
+
+.loc-badge.cembra {
+  background: rgba(236, 72, 153, 0.18);
+  color: #f472b6;
+  border: 1px solid rgba(244, 114, 182, 0.35);
+}
+
+.loc-badge.rotaliana {
+  background: rgba(168, 85, 247, 0.18);
+  color: #c084fc;
+  border: 1px solid rgba(192, 132, 252, 0.35);
+}
+
+.loc-badge.rovereto {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.35);
 }
 
 .zoom-box {
@@ -1712,5 +1753,348 @@ textarea.form-control {
   cursor: pointer;
   line-height: 1;
 }
+
+/* ============================================================
+   SEZIONE EVENTI IN TRENTINO & MAPPA RETE PROVINCIALE
+   ============================================================ */
+.trentino-intro-banner {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.08) 0%, rgba(28, 79, 124, 0.28) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.trentino-intro-text h3 {
+  font-size: 1.45rem;
+  color: var(--sky);
+  margin-bottom: 0.4rem;
+}
+
+.trentino-intro-text p {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  max-width: 660px;
+}
+
+#trentino .container {
+  max-width: 1360px;
+}
+
+.trentino-network-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 2rem;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* Mappa Card & Patti Card */
+.trentino-map-card,
+.trentino-pacts-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-md);
+}
+
+.trentino-map-header,
+.trentino-pacts-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 0.8rem;
+}
+
+.trentino-map-header h4,
+.trentino-pacts-header h4 {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.map-badge-status {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--sky);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.trentino-map-canvas {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 480px;
+  background: rgba(11, 19, 41, 0.5);
+  border-radius: var(--radius-sm);
+  padding: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.tn-svg-map {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  overflow: visible;
+}
+
+.tn-map-outline {
+  fill: rgba(28, 79, 124, 0.22);
+  stroke: rgba(56, 189, 248, 0.35);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.1));
+}
+
+.tn-river-adige {
+  fill: none;
+  stroke: rgba(56, 189, 248, 0.4);
+  stroke-width: 2.5;
+  stroke-dasharray: 4, 3;
+}
+
+.tn-lake {
+  fill: rgba(56, 189, 248, 0.25);
+  stroke: rgba(56, 189, 248, 0.5);
+  stroke-width: 1.2;
+}
+
+/* Pins Mappa */
+.tn-pin {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.tn-pin:hover {
+  transform: scale(1.15);
+}
+
+.tn-pin.active-pin .pin-circle {
+  fill: rgba(247, 172, 52, 0.45);
+  stroke: var(--amber);
+  stroke-width: 3;
+}
+
+.tn-pin.active-pin .pin-dot {
+  fill: var(--amber);
+  r: 7;
+}
+
+.tn-pin.active-pin .pin-label {
+  fill: var(--amber);
+  font-weight: 700;
+}
+
+.pin-circle {
+  fill: rgba(56, 189, 248, 0.25);
+  stroke: var(--sky);
+  stroke-width: 1.5;
+  transition: all 0.25s ease;
+}
+
+.pin-dot {
+  fill: var(--sky);
+  transition: all 0.25s ease;
+}
+
+.pin-circle.starting {
+  fill: rgba(148, 163, 184, 0.15);
+  stroke: #94a3b8;
+  stroke-dasharray: 3, 2;
+}
+
+.pin-dot.starting {
+  fill: #94a3b8;
+}
+
+.pin-label.starting-label {
+  fill: #94a3b8;
+  font-style: italic;
+}
+
+.pin-label {
+  font-family: var(--font-main);
+  font-size: 11px;
+  font-weight: 600;
+  fill: var(--text-secondary);
+  pointer-events: none;
+}
+
+.pin-label.bold {
+  font-weight: 700;
+  fill: #f472b6;
+}
+
+.pin-dot.highlight {
+  fill: #f472b6;
+}
+
+.pin-circle.active {
+  fill: rgba(247, 172, 52, 0.35);
+  stroke: var(--amber);
+  stroke-width: 2;
+}
+
+.pin-dot.active {
+  fill: var(--amber);
+}
+
+.pin-label.our-label {
+  font-weight: 800;
+  fill: var(--amber);
+  font-size: 12px;
+}
+
+.pulse {
+  animation: mapPulse 2s infinite ease-in-out;
+}
+
+@keyframes mapPulse {
+  0% { r: 10px; opacity: 0.9; }
+  50% { r: 16px; opacity: 0.35; stroke-width: 2.5; }
+  100% { r: 10px; opacity: 0.9; }
+}
+
+.map-hint {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  text-align: center;
+  margin-top: 0.8rem;
+  font-style: italic;
+}
+
+/* Lista Patti */
+.trentino-pacts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.75rem;
+  align-content: start;
+}
+
+.pact-item-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.1rem;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pact-item-card:hover,
+.pact-item-card.selected {
+  border-color: var(--sky);
+  background: rgba(28, 79, 124, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+
+.pact-item-card.is-our-pact {
+  border-color: rgba(247, 172, 52, 0.45);
+  background: rgba(247, 172, 52, 0.06);
+}
+
+.pact-item-card.is-our-pact:hover,
+.pact-item-card.is-our-pact.selected {
+  border-color: var(--amber);
+  background: rgba(247, 172, 52, 0.14);
+}
+
+.pact-item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.pact-item-name {
+  font-family: var(--font-heading);
+  font-size: 1.08rem;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.pact-status-pill {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+.pact-status-pill.active {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.pact-status-pill.starting {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.pact-item-area {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.pact-item-desc {
+  display: none !important;
+}
+
+@media (max-width: 992px) {
+  .trentino-network-grid {
+    grid-template-columns: 1fr;
+  }
+  .trentino-intro-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Griglia Card Eventi Trentino — card stessa larghezza delle altre, centrata se ce n'è una sola */
+#trentinoEventsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 420px));
+  justify-content: center;
+  gap: 1.8rem;
+}
+
+/* Legenda mappa SVG */
+.map-legend {
+  pointer-events: none;
+}
+
+
 
 
