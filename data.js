@@ -210,8 +210,8 @@ const PATTO_DATA = {
     },
     {
       id: "patto-cembra",
-      name: "Patti Digitali Valle di Cembra",
-      area: "Valle di Cembra (Cembra Lisignago, Albiano, Giovo, Segonzano, Sover)",
+      name: "Patti Digitali Val di Cembra",
+      area: "Val di Cembra (Cembra Lisignago, Albiano, Giovo, Segonzano, Sover)",
       status: "Patto Attivo",
       description: "Comunità attiva con il Piano Giovani e la rassegna teatrale 'Aspettando lo smartphone, vado a teatro'.",
       hasEvent: true
@@ -307,8 +307,8 @@ const PATTO_DATA = {
       id: "ev-cembra-28nov",
       title: "IT'S A MATCH! — Spettacolo Teatrale Ragazzi",
       category: "Teatro & Comunità",
-      initiative: "Patti Digitali Valle di Cembra & Piano Giovani",
-      territory: "Valle di Cembra",
+      initiative: "Patti Digitali Val di Cembra & Piano Giovani",
+      territory: "Val di Cembra",
       locationBadge: "cembra",
       date: "Sabato 28 Novembre 2026",
       dateIso: "2026-11-28",

@@ -1881,11 +1881,32 @@ textarea.form-control {
 /* Pins Mappa */
 .tn-pin {
   cursor: pointer;
-  transition: transform 0.2s ease;
 }
 
-.tn-pin:hover {
-  transform: scale(1.15);
+.tn-pin:hover .pin-circle {
+  stroke-width: 2.8;
+  stroke: var(--sky);
+  fill: rgba(56, 189, 248, 0.45);
+  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.6));
+}
+
+.tn-pin:hover .pin-dot {
+  fill: #fff;
+}
+
+.tn-pin:hover .pin-label {
+  fill: var(--text-primary);
+  font-weight: 700;
+}
+
+.tn-pin.our-pact:hover .pin-circle {
+  stroke: var(--amber);
+  fill: rgba(247, 172, 52, 0.45);
+  filter: drop-shadow(0 0 8px rgba(247, 172, 52, 0.7));
+}
+
+.tn-pin.our-pact:hover .pin-label {
+  fill: var(--amber);
 }
 
 .tn-pin.active-pin .pin-circle {
@@ -1965,13 +1986,14 @@ textarea.form-control {
 }
 
 .pulse {
-  animation: mapPulse 2s infinite ease-in-out;
+  animation: mapPulse 2.4s infinite ease-in-out;
+  pointer-events: none;
 }
 
 @keyframes mapPulse {
-  0% { r: 10px; opacity: 0.9; }
-  50% { r: 16px; opacity: 0.35; stroke-width: 2.5; }
-  100% { r: 10px; opacity: 0.9; }
+  0% { r: 10px; opacity: 0.9; stroke-width: 1.5; }
+  50% { r: 14px; opacity: 0.35; stroke-width: 3; }
+  100% { r: 10px; opacity: 0.9; stroke-width: 1.5; }
 }
 
 .map-hint {
